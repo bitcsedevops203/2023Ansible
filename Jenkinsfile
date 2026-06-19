@@ -20,7 +20,7 @@ pipeline{
           }
       stage('Archive'){
         steps{
-          archiveArtifact artifacts:'tomcat/*.war', fingerprint:true
+          archiveArtifacts artifacts:'tomcat/*.war', fingerprint:true
           }
           }
       stage('Deploy'){
