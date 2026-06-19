@@ -18,11 +18,7 @@ pipeline{
           sh 'mvn clean package'
           }
           }
-      stage('Archive'){
-        steps{
-          archiveArtifacts artifacts:'tomcat/*.war', fingerprint:true
-          }
-          }
+     
       stage('Deploy'){
         steps{
           sh 'mvn clean package'
